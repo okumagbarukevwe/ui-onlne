@@ -14,7 +14,7 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true}));  
 
 app.get('/', (req, res) => {
-  const date = new Date("2020-05-12T23:50:21.817Z");
+  const date = new Date();
 let dated = date.toDateString();
   res.render('index', {dated: dated })
 })
