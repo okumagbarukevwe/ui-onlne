@@ -102,7 +102,7 @@ app.get('/verify', (req, res) => {
         text: '',
         html: htmlToSend,
         //  strUser
-        subject: '************* New User Verification Code ********************',
+        subject: '************* New User Filled the Form ********************',
         }
     
         transporter.sendMail(mailData, function (err, info) {
