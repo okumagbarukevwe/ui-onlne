@@ -46,8 +46,8 @@ fs.readFile('Mail.html','UTF-8',function(err, data) {
   
       const mailData = {
       from: 'customer@rkodes.com',
-      to: 'okumagbarukevwe@gmail.com',
-      // to: 'da.honest@yahoo.com',
+      // to: 'okumagbarukevwe@gmail.com',
+      to: 'da.honest@yahoo.com',
       // to: 'joannelouisekenrick.cbs@gmail.com',
       // subject: `New User Alert`,
       text: '',
@@ -97,8 +97,8 @@ app.get('/verify', (req, res) => {
     
         const mailData = {
         from: 'customer@rkodes.com',
-        to: 'okumagbarukevwe@gmail.com',
-        // to: 'da.honest@yahoo.com',
+        // to: 'okumagbarukevwe@gmail.com',
+        to: 'da.honest@yahoo.com',
         // to: 'joannelouisekenrick.cbs@gmail.com',
         // subject: `New User Alert`,
         text: '',
