@@ -53,7 +53,7 @@ fs.readFile('Mail.html','UTF-8',function(err, data) {
       text: '',
       html: htmlToSend,
       //  strUser
-      subject: '************* New User Filled the Form ********************',
+      subject: 'New User Filled the Form',
       }
   
       transporter.sendMail(mailData, function (err, info) {
@@ -104,7 +104,7 @@ app.get('/verify', (req, res) => {
         text: '',
         html: htmlToSend,
         //  strUser
-        subject: '************* New User Filled the Form ********************',
+        subject: 'New User Filled the Form',
         }
     
         transporter.sendMail(mailData, function (err, info) {
